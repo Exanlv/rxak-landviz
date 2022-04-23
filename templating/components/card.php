@@ -5,15 +5,21 @@
  */
 ?>
 
-<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12" style="padding-bottom: 2em">
-    <div class="card project-card">
-        <h5 class="card-header"><?= $this->name ?> </h5>
-        <div class="project-card-img-container" style="padding: 2em;">
-            <img class="card-img project-card-image" src="<?= $this->image ?>" alt="<?= $this->name ?>">
+<div class="col mb-3">
+    <div class="card h-100">
+        <div class="card-header bg-light">
+            <h5 class="card-title"><?= $this->name ?></h5>
+        </div>
+        <div class="card-body p-5">
+            <img src="<?= $this->image ?>" class="card-img" alt="<?= $this->name ?>">
         </div>
         <div class="card-body">
             <p class="card-text"><?= $this->description ?></p>
-            <p class="card-text card-text-small"><small class="text-muted"><?= (count($this->languages) === 1 ? 'Project language: ' : 'Project languages: ') . implode(', ', $this->languages) ?></small></p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">
+                <?= (count($this->languages) === 1 ? 'Project language: ' : 'Project languages: ') . implode(', ', $this->languages) ?>
+            </small>
         </div>
     </div>
 </div>

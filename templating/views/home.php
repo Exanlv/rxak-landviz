@@ -32,6 +32,8 @@ use Rxak\App\Templating\Components\HeaderBig;
 
         <?= new CardGroup($this->cards) ?>
 
-        <a href="./projects.html">View more</a>
+        <br />
+
+        <a href="/projects">View more</a>
     </div>
 </div>

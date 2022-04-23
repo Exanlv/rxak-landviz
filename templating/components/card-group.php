@@ -1,12 +1,10 @@
 <?php
 
 /**
- * @var \Rxak\App\Templating\Components\CardGroup
+ * @var \Rxak\App\Templating\Components\CardGroup $this
  */
 ?>
 
-<div class="container" style="margin-bottom: 0">
-    <div class="row justify-content-center">
-        <?= implode('', $this->cards) ?>
-    </div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <?= implode('', $this->cards) ?>
 </div>
