@@ -1,0 +1,23 @@
+.bg-header-gradient {
+    background: linear-gradient(0deg, rgb(50, 95, 141), rgb(149, 182, 216));
+}
+
+.max-width-100 {
+    max-width: 100%;
+}
+
+.header-big-mountains {
+    max-height: 30vh;
+}
+
+h1 {
+    font-family: 'Cookie';
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
