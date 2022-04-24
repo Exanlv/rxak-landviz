@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var \Rxak\App\Templating\Pages\Admin\CreateCategoryPage $this
+ * @var \Rxak\App\Templating\Pages\Admin\Category\Create $this
  */
 
 use Rxak\App\Templating\Components\HeaderBig;

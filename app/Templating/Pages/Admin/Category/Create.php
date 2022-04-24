@@ -1,11 +1,11 @@
 <?php
 
-namespace Rxak\App\Templating\Pages\Admin;
+namespace Rxak\App\Templating\Pages\Admin\Category;
 
 use Rxak\App\Templating\Pages\BasePage;
 use Rxak\Framework\Templating\Page;
 
-class CreateProjectPage extends Page
+class Create extends Page
 {
     public function __construct(
     ) {
@@ -13,7 +13,7 @@ class CreateProjectPage extends Page
 
     public static function getFile(): string
     {
-        return 'views/admin/create-project';
+        return 'views/admin/category/create';
     }
 
     public function build(): string

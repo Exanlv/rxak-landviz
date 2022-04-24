@@ -4,8 +4,8 @@ namespace Rxak\App\Http\Controllers\Admin;
 
 use Rxak\App\Http\Controllers\BaseController;
 use Rxak\App\Models\Category;
-use Rxak\App\Templating\Pages\Admin\CategoriesPage;
-use Rxak\App\Templating\Pages\Admin\CreateCategoryPage;
+use Rxak\App\Templating\Pages\Admin\Category\Create;
+use Rxak\App\Templating\Pages\Admin\Category\Index;
 use Rxak\Framework\Http\Request;
 use Rxak\Framework\Http\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -17,7 +17,7 @@ class CategoryController extends BaseController
         $projects = Category::all()->all();
 
         return new Response(
-            new CategoriesPage($projects),
+            new Index($projects),
             200
         );
     }
@@ -25,7 +25,7 @@ class CategoryController extends BaseController
     public function create(Request $request)
     {
         return new Response(
-            new CreateCategoryPage(),
+            new Create(),
             200
         );
     }

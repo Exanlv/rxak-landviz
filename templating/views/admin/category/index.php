@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var \Rxak\App\Templating\Pages\Admin\CategoriesPage $this
+ * @var \Rxak\App\Templating\Pages\Admin\Category\Index $this
  */
 
 use Rxak\App\Templating\Components\HeaderBig;

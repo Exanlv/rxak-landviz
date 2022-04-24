@@ -1,23 +1,19 @@
 <?php
 
-namespace Rxak\App\Templating\Pages\Admin;
+namespace Rxak\App\Templating\Pages\Admin\Project;
 
 use Rxak\App\Templating\Pages\BasePage;
 use Rxak\Framework\Templating\Page;
 
-class ProjectsPage extends Page
+class Create extends Page
 {
-    /**
-     * @var \Rxak\App\Models\Project[] $projects
-     */
     public function __construct(
-        public array $projects
     ) {
     }
 
     public static function getFile(): string
     {
-        return 'views/admin/projects';
+        return 'views/admin/project/create';
     }
 
     public function build(): string

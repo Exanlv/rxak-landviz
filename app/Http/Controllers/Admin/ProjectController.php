@@ -4,8 +4,8 @@ namespace Rxak\App\Http\Controllers\Admin;
 
 use Rxak\App\Http\Controllers\BaseController;
 use Rxak\App\Models\Project;
-use Rxak\App\Templating\Pages\Admin\CreateProjectPage;
-use Rxak\App\Templating\Pages\Admin\ProjectsPage;
+use Rxak\App\Templating\Pages\Admin\Project\Create;
+use Rxak\App\Templating\Pages\Admin\Project\Index;
 use Rxak\Framework\Filesystem\Filesystem;
 use Rxak\Framework\Http\Request;
 use Rxak\Framework\Http\Response;
@@ -18,7 +18,7 @@ class ProjectController extends BaseController
         $projects = Project::all()->all();
 
         return new Response(
-            new ProjectsPage($projects),
+            new Index($projects),
             200
         );
     }
@@ -26,7 +26,7 @@ class ProjectController extends BaseController
     public function create(Request $request)
     {
         return new Response(
-            new CreateProjectPage(),
+            new Create(),
             200
         );
     }

@@ -1,23 +1,23 @@
 <?php
 
-namespace Rxak\App\Templating\Pages\Admin;
+namespace Rxak\App\Templating\Pages\Admin\Project;
 
 use Rxak\App\Templating\Pages\BasePage;
 use Rxak\Framework\Templating\Page;
 
-class CategoriesPage extends Page
+class Index extends Page
 {
     /**
-     * @var \Rxak\App\Models\Category[] $categories
+     * @var \Rxak\App\Models\Project[] $projects
      */
     public function __construct(
-        public array $categories
+        public array $projects
     ) {
     }
 
     public static function getFile(): string
     {
-        return 'views/admin/category';
+        return 'views/admin/project/index';
     }
 
     public function build(): string
