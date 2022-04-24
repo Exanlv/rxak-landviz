@@ -972,16 +972,16 @@
         },
         {
             "name": "rxak/support",
-            "version": "v22.4.6",
+            "version": "v22.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Exanlv/Rxak-Support.git",
-                "reference": "0cb269f9085d0273ada785b5d692941059578a20"
+                "reference": "36f0dd1c0f7f5fbc9ac4ce3042dfa19b91942e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Exanlv/Rxak-Support/zipball/0cb269f9085d0273ada785b5d692941059578a20",
-                "reference": "0cb269f9085d0273ada785b5d692941059578a20",
+                "url": "https://api.github.com/repos/Exanlv/Rxak-Support/zipball/36f0dd1c0f7f5fbc9ac4ce3042dfa19b91942e99",
+                "reference": "36f0dd1c0f7f5fbc9ac4ce3042dfa19b91942e99",
                 "shasum": ""
             },
             "require": {
@@ -1007,9 +1007,9 @@
             "description": "Support for Rxak framework",
             "support": {
                 "issues": "https://github.com/Exanlv/Rxak-Support/issues",
-                "source": "https://github.com/Exanlv/Rxak-Support/tree/v22.4.6"
+                "source": "https://github.com/Exanlv/Rxak-Support/tree/v22.4.7"
             },
-            "time": "2022-04-23T17:45:30+00:00"
+            "time": "2022-04-24T10:46:34+00:00"
         },
         {
             "name": "symfony/console",

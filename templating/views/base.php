@@ -29,7 +29,7 @@ use Rxak\App\Templating\Components\LoggedInMenu;
                 <img src="/assets/img/logo-gray.svg" height="32" class="me-3" />
                 <span class="fs-4">Landviz.nl</span>
             </a>
-            <?= $this->loggedIn ? new LoggedInMenu() : '' ?>
+            <?= new LoggedInMenu() ?>
         </header>
         
         <?= $this->body ?>

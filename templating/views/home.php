@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var \Rxak\Templating\Pages\HomePage $this
+ * @var \Rxak\App\Templating\Pages\HomePage $this
  */
 
 use Rxak\App\Templating\Components\CardGroup;

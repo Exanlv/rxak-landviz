@@ -16,10 +16,16 @@
         <div class="card-body">
             <p class="card-text"><?= $this->description ?></p>
         </div>
-        <div class="card-footer">
-            <small class="text-muted">
-                <?= (count($this->languages) === 1 ? 'Project language: ' : 'Project languages: ') . implode(', ', $this->languages) ?>
-            </small>
-        </div>
+        <?php
+        if (count($this->languages) > 0) {
+        ?>
+            <div class="card-footer">
+                <small class="text-muted">
+                    <?= (count($this->languages) === 1 ? 'Project language: ' : 'Project languages: ') . implode(', ', $this->languages) ?>
+                </small>
+            </div>
+        <?php
+        }
+        ?>
     </div>
 </div>

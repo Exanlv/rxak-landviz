@@ -8,11 +8,14 @@ use Rxak\Framework\Templating\Component;
 
 class LoggedInMenu extends Component
 {
-    public User $user;
+    public ?User $user;
+    public bool $loggedIn;
 
     public function __construct(
     ) {
-        $this->user = Authorization::get();
+        if ($this->loggedIn = Authorization::isAuthorized()) {
+            $this->user = Authorization::get();
+        }
     }
 
     public static function getFile(): string
