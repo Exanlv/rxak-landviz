@@ -21,6 +21,9 @@
     "autoload": {
         "psr-4": {
             "Rxak\\App\\": "app/"
-        }
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
     }
 }

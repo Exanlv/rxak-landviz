@@ -38,4 +38,4 @@ use Rxak\App\Templating\Components\HeaderBig;
     </div>
 </div>
 
-<script src="/assets/snow.js"></script>
+<script src="<?= pub('assets/snow.js') ?>"></script>

@@ -16,15 +16,15 @@ use Rxak\App\Templating\Components\LoggedInMenu;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Custom css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?= pub('assets/css/fonts.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= pub('assets/css/main.css') ?>">
 </head>
 
 <body>
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom position-relative">
             <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                <img src="/assets/img/logo-gray.svg" height="32" class="me-3" />
+                <img src="<?= pub('assets/img/logo-gray.svg') ?>" height="32" class="me-3" />
                 <span class="fs-4">Landviz.nl</span>
             </a>
             <?= new LoggedInMenu() ?>
