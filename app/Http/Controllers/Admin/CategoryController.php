@@ -74,8 +74,6 @@ class CategoryController extends BaseController
     {
         $category->delete();
 
-        $category->save();
-
         return new RedirectResponse('/admin/category');
     }
 }

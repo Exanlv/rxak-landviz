@@ -3,9 +3,12 @@
 namespace Rxak\App\Http\Controllers\Admin;
 
 use Rxak\App\Http\Controllers\BaseController;
+use Rxak\App\Models\Category;
 use Rxak\App\Models\Project;
 use Rxak\App\Templating\Pages\Admin\Project\Create;
+use Rxak\App\Templating\Pages\Admin\Project\Edit;
 use Rxak\App\Templating\Pages\Admin\Project\Index;
+use Rxak\App\Templating\Pages\Admin\Project\Show;
 use Rxak\Framework\Filesystem\Filesystem;
 use Rxak\Framework\Http\Request;
 use Rxak\Framework\Http\Response;
@@ -23,10 +26,19 @@ class ProjectController extends BaseController
         );
     }
 
-    public function create(Request $request)
+    public function show(Request $request, Project $project)
     {
         return new Response(
-            new Create(),
+            new Show($project),
+            200
+        );
+    }
+
+    public function create(Request $request)
+    {
+        $categories = Category::all()->all();
+        return new Response(
+            new Create($categories),
             200
         );
     }
@@ -37,6 +49,53 @@ class ProjectController extends BaseController
 
         $project->name = $request->get('name');
         $project->description = $request->get('description');
+        $project->category_id = (int) $request->get('category');
+
+        /**
+         * @var ?\Symfony\Component\HttpFoundation\File\UploadedFile
+         */
+        $file = $request->files->get('thumbnail');
+        if ($file === null) {
+            $project->image = 'https://placeholder.pics/svg/512';
+        } else {
+            $path = '/uploads/project-images';
+            $fileExtension = $file->getClientOriginalExtension();
+            $fullDir = Filesystem::getInstance()->baseDir . '/public' . $path;
+
+            do {
+                $fileName = bin2hex(random_bytes(10)) . '.' . $fileExtension;
+            } while (file_exists($fullDir . '/' . $fileName));
+
+            $file->move($fullDir, $fileName);
+
+            $project->image = $path . '/' . $fileName;
+        }
+
+        $project->highlighted = $request->get('highlighted', 'off') === 'on';
+
+        $project->languages = array_map(function ($item) {
+            return trim($item);
+        }, explode(',', $request->get('languages', '')));
+
+        $project->save();
+
+        return new RedirectResponse('/admin/project');
+    }
+
+    public function edit(Request $request, Project $project)
+    {
+        $categories = Category::all()->all();
+        return new Response(
+            new Edit($project, $categories),
+            200
+        );
+    }
+
+    public function update(Request $request, Project $project)
+    {
+        $project->name = $request->get('name');
+        $project->description = $request->get('description');
+        $project->category_id = (int) $request->get('category');
 
         /**
          * @var ?\Symfony\Component\HttpFoundation\File\UploadedFile
@@ -54,8 +113,6 @@ class ProjectController extends BaseController
             $file->move($fullDir, $fileName);
 
             $project->image = $path . '/' . $fileName;
-        } else {
-            $project->image = 'https://placeholder.pics/svg/512';
         }
 
         $project->highlighted = $request->get('highlighted', 'off') === 'on';
@@ -65,6 +122,13 @@ class ProjectController extends BaseController
         }, explode(',', $request->get('languages', '')));
 
         $project->save();
+
+        return new RedirectResponse('/admin/project');
+    }
+
+    public function destroy(Request $request, Project $project)
+    {
+        $project->delete();
 
         return new RedirectResponse('/admin/project');
     }

@@ -5,6 +5,7 @@
  */
 
 use Rxak\App\Templating\Components\HeaderBig;
+use Rxak\Framework\Templating\Components\Csrf;
 use Rxak\Framework\Templating\Components\Method;
 
 ?>
@@ -12,7 +13,8 @@ use Rxak\Framework\Templating\Components\Method;
 <?= new HeaderBig() ?>
 <div class="px-5 mb-5">
     <div class="container-fluid px-5 position-relative pt-5">
-        <form method="post" action="/admin/category/<?= $this->category->id ?>/edit">
+        <form method="post" action="/admin/category/<?= $this->category->id ?>">
+            <?= new Csrf() ?>
             <?= new Method('PATCH'); ?>
             <div class="mb-3">
                 <label for="CategoryName" class="form-label">Category name</label>

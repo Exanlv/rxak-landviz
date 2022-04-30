@@ -36,12 +36,12 @@ use Rxak\Framework\Templating\Components\Method;
                         <td><?= $category->name ?></td>
                         <td><?= $category->weight ?></td>
                         <td>
-                            <a class="btn btn-outline-dark mx-1" href="/admin/category/<?= $category->id ?>">View</a>
-                            <a class="btn btn-outline-dark mx-1" href="/admin/category/<?= $category->id ?>/edit">Edit</a>
-                            <form method="post" class="d-inline-block mx-1">
+                            <a class="btn btn-outline-dark mx-1 bg-light" href="/admin/category/<?= $category->id ?>">View</a>
+                            <a class="btn btn-outline-dark mx-1 bg-light" href="/admin/category/<?= $category->id ?>/edit">Edit</a>
+                            <form method="post" class="d-inline-block mx-1" action="/admin/category/<?= $category->id ?>">
                                 <?= new Method('DELETE') ?>
                                 <?= new Csrf() ?>
-                                <input type="submit" class="btn btn-outline-dark" value="Delete">
+                                <input type="submit" class="btn btn-outline-dark bg-light" value="Delete">
                             </form>
                         </td>
                     </tr>

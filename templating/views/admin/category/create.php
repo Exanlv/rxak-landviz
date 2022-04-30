@@ -5,6 +5,7 @@
  */
 
 use Rxak\App\Templating\Components\HeaderBig;
+use Rxak\Framework\Templating\Components\Csrf;
 
 ?>
 
@@ -12,6 +13,7 @@ use Rxak\App\Templating\Components\HeaderBig;
 <div class="px-5 mb-5">
     <div class="container-fluid px-5 position-relative pt-5">
         <form method="post" action="/admin/category/new">
+            <?= new Csrf() ?>
             <div class="mb-3">
                 <label for="CategoryName" class="form-label">Category name</label>
                 <input type="text" class="form-control <?= $this->hasValidationError('name') ? 'is-invalid' : '' ?>" id="CategoryName" name="name">

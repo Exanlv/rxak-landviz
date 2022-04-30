@@ -5,7 +5,7 @@ namespace Rxak\App\Http\Validators\Admin;
 use Rxak\App\Helpers\Authorization;
 use Rxak\App\Models\Category;
 
-class CreateProjectValidator extends ProjectValidator
+class EditProjectValidator extends ProjectValidator
 {
     public function authorized(): bool
     {
