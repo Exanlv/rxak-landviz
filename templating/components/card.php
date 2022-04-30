@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="col-12 col-lg-4 mb-3">
+<div class="col">
     <div class="card h-100">
         <div class="card-header bg-light">
             <h5 class="card-title"><?= $this->name ?></h5>
