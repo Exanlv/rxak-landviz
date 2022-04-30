@@ -1,6 +1,6 @@
 {
-    "name": "rxak/framework",
-    "description": "The Rxak framework",
+    "name": "rxak/landviz",
+    "description": "Site for landviz.nl",
     "type": "project",
     "license": "MIT",
     "authors": [

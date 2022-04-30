@@ -37,3 +37,5 @@ use Rxak\App\Templating\Components\HeaderBig;
         <a href="/projects">View more</a>
     </div>
 </div>
+
+<script src="/assets/snow.js"></script>

@@ -18,8 +18,6 @@ use Rxak\App\Templating\Components\LoggedInMenu;
     <!-- Custom css -->
     <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-
-    <!-- <script src="/assets/snow.js"></script> -->
 </head>
 
 <body>
@@ -39,5 +37,3 @@ use Rxak\App\Templating\Components\LoggedInMenu;
 </body>
 
 </html>
-
-<script src="//unpkg.com/alpinejs" defer></script>
