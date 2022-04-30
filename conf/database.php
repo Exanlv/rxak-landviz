@@ -4,7 +4,7 @@ use Rxak\Framework\App;
 
 return [
     'driver' => 'mysql',
-    'host' => 'localhost',
+    'host' => App::env('DATABASE_HOST'),
     'database' => App::env('DATABASE_NAME'),
     'username' => App::env('DATABASE_USERNAME'),
     'password' => App::env('DATABASE_PASSWORD'),
