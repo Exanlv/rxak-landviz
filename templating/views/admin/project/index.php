@@ -18,8 +18,8 @@ use Rxak\App\Templating\Components\HeaderBig;
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Project name</th>
-                    <th scope="col">Highlighted</th>
                     <th scope="col">Languages</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -30,18 +30,18 @@ use Rxak\App\Templating\Components\HeaderBig;
                  */
                 foreach ($this->projects as $project) {
                 ?>
-                    <tr>
+                    <tr class="<?= $project->highlighted ? 'table-primary' : '' ?>">
                         <th scope="row"><?= $project->id ?></th>
                         <td><?= $project->name ?></td>
-                        <td><?= $project->highlighted ? 'True' : 'False' ?></td>
                         <td><?= implode(', ', $project->languages) ?></td>
+                        <td><?= $project->category?->name ?></td>
                         <td>
-                            <!-- <ul>
+                            <ul>
                                 <li>
-                                    <a href="/admin/project/<?= $project->id ?>/edit">Edit</a>
+                                    <a href="/admin/project/<?= $project->id ?>">View</a>
                                     <a href="/admin/project/<?= $project->id ?>/edit">Edit</a>
                                 </li>
-                            </ul> -->
+                            </ul>
                         </td>
                     </tr>
                 <?php

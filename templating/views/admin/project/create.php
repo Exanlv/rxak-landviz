@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @var \Rxak\App\Templating\Pages\Admin\CreateProjectPage $this
+ * @var \Rxak\App\Templating\Pages\Admin\Project\Create $this
  */
 
 use Rxak\App\Templating\Components\HeaderBig;

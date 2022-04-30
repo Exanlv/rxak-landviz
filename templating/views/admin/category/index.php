@@ -5,6 +5,8 @@
  */
 
 use Rxak\App\Templating\Components\HeaderBig;
+use Rxak\Framework\Templating\Components\Csrf;
+use Rxak\Framework\Templating\Components\Method;
 
 ?>
 
@@ -13,9 +15,9 @@ use Rxak\App\Templating\Components\HeaderBig;
 <div class="px-5 mb-5">
     <div class="container-fluid px-5 position-relative pt-5">
         <a href="/admin/category/new" class="position-absolute end-0 top-0">New</a>
-        <table class="table table-bordered">
+        <table class="table text-center">
             <thead>
-                <tr>
+                <tr class="">
                     <th scope="col">#</th>
                     <th scope="col">Category name</th>
                     <th scope="col">Weight</th>
@@ -29,17 +31,18 @@ use Rxak\App\Templating\Components\HeaderBig;
                  */
                 foreach ($this->categories as $category) {
                 ?>
-                    <tr>
+                    <tr class="align-middle">
                         <th scope="row"><?= $category->id ?></th>
                         <td><?= $category->name ?></td>
                         <td><?= $category->weight ?></td>
                         <td>
-                            <!-- <ul>
-                                <li>
-                                    <a href="/admin/project/<?= $project->id ?>/edit">Edit</a>
-                                    <a href="/admin/project/<?= $project->id ?>/edit">Edit</a>
-                                </li>
-                            </ul> -->
+                            <a class="btn btn-outline-dark mx-1" href="/admin/category/<?= $category->id ?>">View</a>
+                            <a class="btn btn-outline-dark mx-1" href="/admin/category/<?= $category->id ?>/edit">Edit</a>
+                            <form method="post" class="d-inline-block mx-1">
+                                <?= new Method('DELETE') ?>
+                                <?= new Csrf() ?>
+                                <input type="submit" class="btn btn-outline-dark" value="Delete">
+                            </form>
                         </td>
                     </tr>
                 <?php

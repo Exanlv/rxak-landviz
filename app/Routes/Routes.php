@@ -11,6 +11,7 @@ use Rxak\App\Http\Validators\Admin\CreateCategoryValidator;
 use Rxak\App\Http\Validators\Admin\CreateProjectValidator;
 use Rxak\App\Http\Validators\Admin\ProjectValidator;
 use Rxak\App\Http\Validators\LoginValidator;
+use Rxak\App\Models\Category;
 use Rxak\Framework\Middleware\CsrfMiddleware;
 use Rxak\Framework\Middleware\StartSessionMiddleware;
 use Rxak\Framework\Routing\Route;
@@ -44,6 +45,10 @@ $adminRoutes = Route::group(
         Route::get('/^\/admin\/category$/', CategoryController::class, 'index', ['validator' => CategoryValidator::class]),
         Route::get('/^\/admin\/category\/new$/', CategoryController::class, 'create', ['validator' => CategoryValidator::class]),
         Route::post('/^\/admin\/category\/new$/', CategoryController::class, 'store', ['validator' => CreateCategoryValidator::class]),
+        Route::get('/^\/admin\/category\/(\d+)$/', CategoryController::class, 'show', ['mappers' => [Category::class]]),
+        Route::get('/^\/admin\/category\/(\d+)\/edit$/', CategoryController::class, 'edit', ['mappers' => [Category::class]]),
+        Route::patch('/^\/admin\/category\/(\d+)\/edit$/', CategoryController::class, 'update', ['mappers' => [Category::class]]),
+        Route::delete('/^\/admin\/category\/(\d+)\/edit$/', CategoryController::class, 'destroy', ['mappers' => [Category::class]]),
     ]
 );
 
