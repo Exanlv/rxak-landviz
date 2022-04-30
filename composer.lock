@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0831112afb4396b74a4f165cfb0374b4",
+    "content-hash": "4f2dfec4a752420a84fe5bd2be21e41d",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -972,16 +972,16 @@
         },
         {
             "name": "rxak/support",
-            "version": "v22.4.10",
+            "version": "v22.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Exanlv/Rxak-Support.git",
-                "reference": "094d3f53eb6ef63e86c1cd94ecb30cf2c985e77f"
+                "reference": "f8431663987ba76f70a674fe61bb3f1bf43be8ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Exanlv/Rxak-Support/zipball/094d3f53eb6ef63e86c1cd94ecb30cf2c985e77f",
-                "reference": "094d3f53eb6ef63e86c1cd94ecb30cf2c985e77f",
+                "url": "https://api.github.com/repos/Exanlv/Rxak-Support/zipball/f8431663987ba76f70a674fe61bb3f1bf43be8ef",
+                "reference": "f8431663987ba76f70a674fe61bb3f1bf43be8ef",
                 "shasum": ""
             },
             "require": {
@@ -1007,9 +1007,9 @@
             "description": "Support for Rxak framework",
             "support": {
                 "issues": "https://github.com/Exanlv/Rxak-Support/issues",
-                "source": "https://github.com/Exanlv/Rxak-Support/tree/v22.4.10"
+                "source": "https://github.com/Exanlv/Rxak-Support/tree/v22.4.11"
             },
-            "time": "2022-04-30T14:42:24+00:00"
+            "time": "2022-04-30T15:54:13+00:00"
         },
         {
             "name": "symfony/console",
