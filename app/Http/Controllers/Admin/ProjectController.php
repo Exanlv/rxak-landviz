@@ -58,9 +58,9 @@ class ProjectController extends BaseController
         if ($file === null) {
             $project->image = 'https://placeholder.pics/svg/512';
         } else {
-            $path = '/uploads/project-images';
+            $path = 'uploads/project-images';
             $fileExtension = $file->getClientOriginalExtension();
-            $fullDir = Filesystem::getInstance()->baseDir . '/public' . $path;
+            $fullDir = Filesystem::getInstance()->baseDir . '/public/' . $path;
 
             do {
                 $fileName = bin2hex(random_bytes(10)) . '.' . $fileExtension;
@@ -68,7 +68,7 @@ class ProjectController extends BaseController
 
             $file->move($fullDir, $fileName);
 
-            $project->image = $path . '/' . $fileName;
+            $project->image = pub($path . '/' . $fileName);
         }
 
         $project->highlighted = $request->get('highlighted', 'off') === 'on';
@@ -102,9 +102,9 @@ class ProjectController extends BaseController
          */
         $file = $request->files->get('thumbnail');
         if ($file !== null) {
-            $path = '/uploads/project-images';
+            $path = 'uploads/project-images';
             $fileExtension = $file->getClientOriginalExtension();
-            $fullDir = Filesystem::getInstance()->baseDir . '/public' . $path;
+            $fullDir = Filesystem::getInstance()->baseDir . '/public/' . $path;
 
             do {
                 $fileName = bin2hex(random_bytes(10)) . '.' . $fileExtension;
@@ -112,7 +112,7 @@ class ProjectController extends BaseController
 
             $file->move($fullDir, $fileName);
 
-            $project->image = $path . '/' . $fileName;
+            $project->image = pub($path . '/' . $fileName);
         }
 
         $project->highlighted = $request->get('highlighted', 'off') === 'on';
