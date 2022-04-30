@@ -21,7 +21,7 @@ use Rxak\App\Templating\Components\LoggedInMenu;
 </head>
 
 <body>
-    <div class="container py-4">
+    <div class="container-md py-4">
         <header class="pb-3 mb-4 border-bottom position-relative">
             <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
                 <img src="<?= pub('assets/img/logo-gray.svg') ?>" height="32" class="me-3" />
