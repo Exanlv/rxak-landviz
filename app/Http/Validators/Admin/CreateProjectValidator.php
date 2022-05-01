@@ -2,16 +2,10 @@
 
 namespace Rxak\App\Http\Validators\Admin;
 
-use Rxak\App\Helpers\Authorization;
 use Rxak\App\Models\Category;
 
 class CreateProjectValidator extends ProjectValidator
 {
-    public function authorized(): bool
-    {
-        return Authorization::isAuthorized();
-    }
-
     public function validate(): void
     {
         $this->minLength('name', 1);

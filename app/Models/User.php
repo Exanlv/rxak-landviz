@@ -5,6 +5,7 @@ namespace Rxak\App\Models;
 use \Rxak\Framework\Models\GetFromRoute;
 
 use Illuminate\Database\Eloquent\Model;
+use Rxak\Framework\Models\Authenticatable;
 
 /**
  * @property int $id

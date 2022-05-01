@@ -2,7 +2,7 @@
 
 namespace Rxak\App\Http\Controllers\Home;
 
-use Rxak\App\Helpers\Authorization;
+use Rxak\Framework\Helpers\Authorization;
 use Rxak\App\Http\Controllers\BaseController;
 use Rxak\App\Models\Project;
 use Rxak\App\Models\User;

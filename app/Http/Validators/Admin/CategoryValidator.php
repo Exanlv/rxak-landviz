@@ -2,7 +2,7 @@
 
 namespace Rxak\App\Http\Validators\Admin;
 
-use Rxak\App\Helpers\Authorization;
+use Rxak\Framework\Helpers\Authorization;
 use Rxak\Framework\Validation\Validator;
 
 class CategoryValidator extends Validator

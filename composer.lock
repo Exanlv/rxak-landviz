@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f2dfec4a752420a84fe5bd2be21e41d",
+    "content-hash": "86b23afa24cf521dacd32e06ffb9fe25",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -972,16 +972,16 @@
         },
         {
             "name": "rxak/support",
-            "version": "v22.4.11",
+            "version": "v22.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Exanlv/Rxak-Support.git",
-                "reference": "f8431663987ba76f70a674fe61bb3f1bf43be8ef"
+                "reference": "7cd957aedff14080d554e144da1f3a1707e278c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Exanlv/Rxak-Support/zipball/f8431663987ba76f70a674fe61bb3f1bf43be8ef",
-                "reference": "f8431663987ba76f70a674fe61bb3f1bf43be8ef",
+                "url": "https://api.github.com/repos/Exanlv/Rxak-Support/zipball/7cd957aedff14080d554e144da1f3a1707e278c6",
+                "reference": "7cd957aedff14080d554e144da1f3a1707e278c6",
                 "shasum": ""
             },
             "require": {
@@ -994,6 +994,9 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/Helpers/helpers.php"
+                ],
                 "psr-4": {
                     "Rxak\\Framework\\": "src/"
                 }
@@ -1007,9 +1010,9 @@
             "description": "Support for Rxak framework",
             "support": {
                 "issues": "https://github.com/Exanlv/Rxak-Support/issues",
-                "source": "https://github.com/Exanlv/Rxak-Support/tree/v22.4.11"
+                "source": "https://github.com/Exanlv/Rxak-Support/tree/v22.5.3"
             },
-            "time": "2022-04-30T15:54:13+00:00"
+            "time": "2022-05-01T18:28:35+00:00"
         },
         {
             "name": "symfony/console",
@@ -1017,12 +1020,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "2a9be9b22169c36f041dfd38997518414ab1a313"
+                "reference": "72f712f1700b64418e0330255df78227fbb2cf8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/2a9be9b22169c36f041dfd38997518414ab1a313",
-                "reference": "2a9be9b22169c36f041dfd38997518414ab1a313",
+                "url": "https://api.github.com/repos/symfony/console/zipball/72f712f1700b64418e0330255df78227fbb2cf8f",
+                "reference": "72f712f1700b64418e0330255df78227fbb2cf8f",
                 "shasum": ""
             },
             "require": {
@@ -1105,7 +1108,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-22T08:18:23+00:00"
+            "time": "2022-04-30T17:15:50+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",

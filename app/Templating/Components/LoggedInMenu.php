@@ -2,7 +2,7 @@
 
 namespace Rxak\App\Templating\Components;
 
-use Rxak\App\Helpers\Authorization;
+use Rxak\Framework\Helpers\Authorization;
 use Rxak\App\Models\User;
 use Rxak\Framework\Templating\Component;
 
