@@ -28,6 +28,10 @@ use Rxak\App\Templating\Components\HeaderBig;
             <label for="Languages" class="form-label">Languages (csv)</label>
             <input type="text" class="form-control" id="Languages" name="languages" value="<?= implode(', ', $this->project->languages) ?>" disabled>
         </div>
+        <div class="mb-3">
+            <label for="Url" class="form-label">Url</label>
+            <input type="text" class="form-control" id="Url" name="url" value="<?= $this->project->url ?>" disabled>
+        </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1" name="highlighted" <?= $this->project->highlighted ? 'checked' : '' ?> disabled>
             <label class="form-check-label" for="exampleCheck1">Highlighted</label>

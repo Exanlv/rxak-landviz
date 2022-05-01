@@ -19,7 +19,7 @@ class Category extends Component
          * @var \Rxak\App\Models\Project $project
          */
         foreach ($category->projects as $project) {
-            $this->cards[] = new Card($project->name, $project->image, $project->description, $project->languages);
+            $this->cards[] = new Card($project->name, $project->image, $project->description, $project->languages, $project->url);
         }
     }
 

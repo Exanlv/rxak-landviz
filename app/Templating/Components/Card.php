@@ -13,7 +13,8 @@ class Card extends Component
         public string $name,
         public string $image,
         public string $description,
-        public array $languages
+        public array $languages,
+        public ?string $url = null
     ) {
         
     }

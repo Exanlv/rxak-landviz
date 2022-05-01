@@ -36,6 +36,10 @@ use Rxak\Framework\Templating\Components\Method;
                 <input type="text" class="form-control <?= $this->hasValidationError('languages') ? 'is-invalid' : '' ?>" id="Languages" name="languages" value="<?= implode(', ', $this->project->languages) ?>">
             </div>
             <div class="mb-3">
+                <label for="Url" class="form-label">Url</label>
+                <input type="text" class="form-control <?= $this->hasValidationError('url') ? 'is-invalid' : '' ?>" id="Url" name="url" value="<?= $this->project->url ?>">
+            </div>
+            <div class="mb-3">
                 <label for="Languages" class="form-label">Category</label>
                 <select class="form-select <?= $this->hasValidationError('languages') ? 'is-invalid' : '' ?>" name="category">
                     <?php

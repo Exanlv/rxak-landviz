@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $name
  * @property string $image
  * @property string $description
+ * @property ?string $url
  * @property string[] $languages
  * @property bool $highlighted
  * @property int $category_id

@@ -31,6 +31,10 @@ use Rxak\Framework\Templating\Components\Csrf;
                 <label for="Languages" class="form-label">Languages (csv)</label>
                 <input type="text" class="form-control <?= $this->hasValidationError('languages') ? 'is-invalid' : '' ?>" id="Languages" name="languages">
             </div>
+            <div class="mb-3">
+                <label for="Url" class="form-label">Url</label>
+                <input type="text" class="form-control <?= $this->hasValidationError('url') ? 'is-invalid' : '' ?>" id="Url" name="url">
+            </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="highlight" name="highlighted">
                 <label class="form-check-label" for="highlight">Highlighted</label>

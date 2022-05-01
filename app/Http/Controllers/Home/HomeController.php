@@ -18,7 +18,7 @@ class HomeController extends BaseController
     public function home(Request $request)
     {
         return new Response(
-            new HomePage(Project::where('highlighted', 1)->get()->toArray()),
+            new HomePage(Project::where('highlighted', 1)->get()->all()),
             200
         );
     }

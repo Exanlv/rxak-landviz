@@ -23,10 +23,11 @@ class HomePage extends Page
          */
         foreach ($highlightedProjects as $project) {
             $this->cards[] = new Card(
-                $project['name'],
-                $project['image'],
-                $project['description'],
-                $project['languages']
+                $project->name,
+                $project->image,
+                $project->description,
+                $project->languages,
+                $project->url
             );
         }
     }

@@ -73,6 +73,11 @@ class ProjectController extends BaseController
 
         $project->highlighted = $request->get('highlighted', 'off') === 'on';
 
+        $url = $request->get('url');
+        if (!empty($url)) {
+            $project->url = $url;
+        }
+
         $project->languages = array_map(function ($item) {
             return trim($item);
         }, explode(',', $request->get('languages', '')));
@@ -116,6 +121,11 @@ class ProjectController extends BaseController
         }
 
         $project->highlighted = $request->get('highlighted', 'off') === 'on';
+
+        $url = $request->get('url');
+        if (!empty($url)) {
+            $project->url = $url;
+        }
 
         $project->languages = array_map(function ($item) {
             return trim($item);
