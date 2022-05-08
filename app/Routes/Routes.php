@@ -13,8 +13,6 @@ use Rxak\App\Http\Validators\Admin\EditCategoryValidator;
 use Rxak\App\Http\Validators\Admin\EditProjectValidator;
 use Rxak\App\Http\Validators\Admin\ProjectValidator;
 use Rxak\App\Http\Validators\LoginValidator;
-use Rxak\App\Models\Category;
-use Rxak\App\Models\Project;
 use Rxak\Framework\Middleware\CsrfMiddleware;
 use Rxak\Framework\Middleware\StartSessionMiddleware;
 use Rxak\Framework\Routing\Route;
@@ -44,18 +42,18 @@ $adminRoutes = Route::group(
         Route::get('/^\/admin\/project$/', AdminProjectController::class, 'index', ['validator' => ProjectValidator::class]),
         Route::get('/^\/admin\/project\/new$/', AdminProjectController::class, 'create', ['validator' => ProjectValidator::class]),
         Route::post('/^\/admin\/project\/new$/', AdminProjectController::class, 'store', ['validator' => CreateProjectValidator::class]),
-        Route::get('/^\/admin\/project\/(\d+)$/', AdminProjectController::class, 'show', ['validator' => ProjectValidator::class, 'mappers' => [Project::class]]),
-        Route::get('/^\/admin\/project\/(\d+)\/edit$/', AdminProjectController::class, 'edit', ['validator' => ProjectValidator::class, 'mappers' => [Project::class]]),
-        Route::patch('/^\/admin\/project\/(\d+)$/', AdminProjectController::class, 'update', ['validator' => EditProjectValidator::class, 'mappers' => [Project::class]]),
-        Route::delete('/^\/admin\/project\/(\d+)$/', AdminProjectController::class, 'destroy', ['validator' => ProjectValidator::class, 'mappers' => [Project::class]]),
+        Route::get('/^\/admin\/project\/(\d+)$/', AdminProjectController::class, 'show', ['validator' => ProjectValidator::class]),
+        Route::get('/^\/admin\/project\/(\d+)\/edit$/', AdminProjectController::class, 'edit', ['validator' => ProjectValidator::class]),
+        Route::patch('/^\/admin\/project\/(\d+)$/', AdminProjectController::class, 'update', ['validator' => EditProjectValidator::class]),
+        Route::delete('/^\/admin\/project\/(\d+)$/', AdminProjectController::class, 'destroy', ['validator' => ProjectValidator::class]),
 
         Route::get('/^\/admin\/category$/', CategoryController::class, 'index', ['validator' => CategoryValidator::class]),
         Route::get('/^\/admin\/category\/new$/', CategoryController::class, 'create', ['validator' => CategoryValidator::class]),
         Route::post('/^\/admin\/category\/new$/', CategoryController::class, 'store', ['validator' => CreateCategoryValidator::class]),
-        Route::get('/^\/admin\/category\/(\d+)$/', CategoryController::class, 'show', ['validator' => CategoryValidator::class, 'mappers' => [Category::class]]),
-        Route::get('/^\/admin\/category\/(\d+)\/edit$/', CategoryController::class, 'edit', ['validator' => CategoryValidator::class, 'mappers' => [Category::class]]),
-        Route::patch('/^\/admin\/category\/(\d+)$/', CategoryController::class, 'update', ['validator' => EditCategoryValidator::class, 'mappers' => [Category::class]]),
-        Route::delete('/^\/admin\/category\/(\d+)$/', CategoryController::class, 'destroy', ['validator' => CategoryValidator::class, 'mappers' => [Category::class]]),
+        Route::get('/^\/admin\/category\/(\d+)$/', CategoryController::class, 'show', ['validator' => CategoryValidator::class]),
+        Route::get('/^\/admin\/category\/(\d+)\/edit$/', CategoryController::class, 'edit', ['validator' => CategoryValidator::class]),
+        Route::patch('/^\/admin\/category\/(\d+)$/', CategoryController::class, 'update', ['validator' => EditCategoryValidator::class]),
+        Route::delete('/^\/admin\/category\/(\d+)$/', CategoryController::class, 'destroy', ['validator' => CategoryValidator::class]),
     ]
 );
 
