@@ -24,6 +24,7 @@ $publicRoutes = Route::group(
     ['middlewares' => [StartSessionMiddleware::class]],
     [
         Route::get('/^\/$/', HomeController::class, 'home'),
+        Route::get('/^\/status$/', HomeController::class, 'getResponseCode'),
         Route::get('/^\/projects$/', ProjectController::class, 'index')
     ]
 );
